@@ -1,0 +1,22 @@
+{
+  "version": 2,
+  "name": "ks-serverless-now",
+  "alias": "ks-serverless-now.now.sh",
+  "builds": [
+    { "src": "server/api/**/*.js", "use": "@now/node" },
+    { "src": "www/package.json", "use": "@now/next" }
+  ],
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "/server/api/$1"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/www/$1",
+      "headers": {
+        "x-request-path": "$1"
+      }
+    }
+  ]
+}
