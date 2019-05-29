@@ -1,14 +1,19 @@
 import React from 'react';
+import Link from 'next/link'
 import Layout from '../components/Layout';
 
 const HomePage = () => (
   <Layout>
     <div>
-      <div>
-        <a href="/users">User list</a>
+      <div style={{ fontSize: 21, marginBottom: 10 }}>
+        <Link href="/users">
+          <a href="/users">Users</a>
+        </Link>
       </div>
-      <div>
-        <a href="/posts">Post list</a>
+      <div style={{ fontSize: 21, marginBottom: 10 }}>
+        <Link href="/posts">
+          <a href="/posts">Posts</a>
+        </Link>
       </div>
     </div>
   </Layout>
