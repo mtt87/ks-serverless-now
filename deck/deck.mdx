@@ -1,0 +1,64 @@
+import { Image } from '@mdx-deck/components';
+import { Split } from '@mdx-deck/layouts';
+
+# Serverless Lambdas + Now v2
+
+Mattia Asti 30/05/2019
+
+https://github.com/mtt87/ks-serverless-now
+
+---
+
+<Image size="80%" src="old-request-process.png" />
+
+---
+
+<Image size="80%" src="new-lambda-process.png" />
+
+---
+
+## λ Lambda function
+
+<Split>
+
+```js
+module.exports = (req, res) => {
+  const data = { name: 'Mattia' };
+  res.end(JSON.stringify(data));
+};
+```
+
+</Split>
+
+---
+
+### Cold and Hot Boots
+
+### Lifecycle and Scalability
+
+no more complex metrics dashboards, scaling algorithms
+
+---
+
+## Advantages
+
+- Code splitting for the backend
+- Better security
+- Easier to debug
+- Faster cold boot times
+
+---
+
+# Now
+
+Global Serverless Deployments
+
+https://zeit.co/now
+
+---
+
+### Local development
+
+1 command for everything
+
+`now dev`

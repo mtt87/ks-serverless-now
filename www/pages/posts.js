@@ -2,9 +2,13 @@ import React, { Component } from 'react';
 import Layout from '../components/Layout';
 import 'isomorphic-unfetch';
 
+const isProduction = process.env.NODE_ENV === 'production';
+
+let BASE_URL = isProduction ? 'https://ks-serverless-now.mattiaasti.now.sh' : 'http://localhost:3000'
+
 class PostsPage extends Component {
   static async getInitialProps () {
-    const res = await fetch('http://localhost:3000/api/posts')
+    const res = await fetch(`${BASE_URL}/api/posts`)
     const json = await res.json()
     return { posts: json };
   }
