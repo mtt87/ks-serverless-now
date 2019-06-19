@@ -20,8 +20,16 @@
       }
     },
     {
+      "src": "/images/(.*)",
+      "dest": "/deck/images/$1"
+    },
+    {
+      "src": "/main.js",
+      "dest": "/deck/main.js"
+    },
+    {
       "src": "/(.*)",
-      "dest": "/deck/$1"
+      "dest": "/deck/index.html"
     }
   ]
 }
