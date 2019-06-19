@@ -4,8 +4,8 @@ import Link from 'next/link'
 const Layout = (props) => (
   <div>
     <header style={{ padding: 20, backgroundColor: '#efcd5b' }}>
-      <Link href="/">
-        <a href="/"><h1>Zeit Now - serverless knowledge sharing</h1></a>
+      <Link href="/demo/">
+        <a href="/demo/"><h2>Knowledge Sharing: Zeit Now - Serverless platform</h2></a>
       </Link>
     </header>
     <div style={{ padding: 20 }}>

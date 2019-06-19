@@ -4,7 +4,8 @@
   "alias": "ks-serverless-now.now.sh",
   "builds": [
     { "src": "server/api/**/*.js", "use": "@now/node" },
-    { "src": "www/package.json", "use": "@now/next" }
+    { "src": "www/package.json", "use": "@now/next" },
+    { "src": "deck/package.json", "use": "@now/static-build" }
   ],
   "routes": [
     {
@@ -12,11 +13,15 @@
       "dest": "/server/api/$1"
     },
     {
-      "src": "/(.*)",
+      "src": "/demo/(.*)",
       "dest": "/www/$1",
       "headers": {
         "x-request-path": "$1"
       }
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/deck/$1"
     }
   ]
 }

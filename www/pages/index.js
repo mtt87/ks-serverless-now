@@ -6,13 +6,13 @@ const HomePage = () => (
   <Layout>
     <div>
       <div style={{ fontSize: 21, marginBottom: 10 }}>
-        <Link href="/users">
-          <a href="/users">Users</a>
+        <Link href="/demo/users">
+          <a href="/demo/users">Users</a>
         </Link>
       </div>
       <div style={{ fontSize: 21, marginBottom: 10 }}>
-        <Link href="/posts">
-          <a href="/posts">Posts</a>
+        <Link href="/demo/posts">
+          <a href="/demo/posts">Posts</a>
         </Link>
       </div>
     </div>

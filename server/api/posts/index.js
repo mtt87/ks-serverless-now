@@ -52,6 +52,10 @@ const posts = [
 const wait = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
 module.exports = async (req, res) => {
+  const postsWithDate = posts.map(post => ({
+    ...post,
+    createdAt: new Date(),
+  }));
   await wait(5000);
-  res.end(JSON.stringify(posts));
+  res.end(JSON.stringify(postsWithDate));
 }

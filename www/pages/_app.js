@@ -19,7 +19,7 @@ export default class MyApp extends App {
       <Container>
         <Head>
           <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
-          <link rel="stylesheet" href="/static/main.css" />
+          <link rel="stylesheet" href="/demo/static/main.css" />
         </Head>
         <Component {...pageProps} />
       </Container>
