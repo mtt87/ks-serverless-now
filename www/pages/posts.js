@@ -5,7 +5,7 @@ import { format, parseISO } from 'date-fns';
 
 const isProduction = process.env.NODE_ENV === 'production';
 
-let BASE_URL = isProduction ? 'https://ks-serverless-now.mattiaasti.now.sh' : 'http://localhost:3000'
+let BASE_URL = isProduction ? 'https://ks-serverless-now.mtt.now.sh' : 'http://localhost:3000'
 
 class PostsPage extends Component {
   static async getInitialProps ({ res }) {
