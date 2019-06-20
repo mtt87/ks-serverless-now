@@ -73,3 +73,5 @@ typings/
 .next
 
 .DS_Store
+
+deck/dist
