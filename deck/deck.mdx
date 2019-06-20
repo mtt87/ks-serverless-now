@@ -59,7 +59,7 @@ module.exports = (req, res) => {
 ---
 
 ### Cold vs Hot boot
-Spawn the container and parse your function (< 1sec)
+Spawn the container and parse your function (~hundred ms)
 
 ### Lifecycle and Scalability
  - scale to 0
@@ -104,11 +104,58 @@ https://zeit.co/now
 
 `now`
 
+Demo & how it works behind the scenes
+
 ---
 
 ### Bonus
 
-Serverless Pre-Rendering (SPR)
+## Serverless Pre-Rendering (SPR)
 
+---
+
+## Client side Rendering
+One index.html with a bundle.js to mount
+
+`<div id="react-root" />`
+
+❌ SEO
+
+---
+
+## Static export
+✅ Every page is pre rendered as html  
+✅ Infinite scaling, cheap
+
+❌ It's static <img width="100px" src="/images/youdontsay.jpg" />  
+❌ Deploy = rebuild everything
+
+---
+
+## Server Side Rendering (SSR)
+
+✅ Every page is rendered on the fly by the server  
+✅ Dynamic
+
+❌ Needs a server running <img width="100px" src="/images/youdontsay.jpg" />
+
+❌ Less cheap and needs a proper CDN with cache configured
+
+---
+
+## Serverless Pre Rendering (SPR)
+
+Take advantage of both the static and dynamic
+
+Keyword: `stale-while-revalidate`  
 <img width="90%" src="https://assets.zeit.co/image/upload/v1556903670/front/blog/serverless-prerendering/headers-colored.png" />
 
+---
+
+## Serverless Pre Rendering
+
+✅ SEO friendly: pages are pre rendered  
+✅ Instant load: no matter how slow is your backend  
+✅ Fault tolerant: backend can die, pages still served  
+✅ Realtime updates: `s-maxage=1` = updated every second  
+✅ Cheap: most of the requests are hitting CDN  
